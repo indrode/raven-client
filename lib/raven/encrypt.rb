@@ -24,6 +24,8 @@ module Raven
         hash[:encrypted_key],
         hash[:encrypted_iv]
       )
+
+      true
     end
 
     def encrypt!

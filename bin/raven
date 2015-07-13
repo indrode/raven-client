@@ -25,7 +25,7 @@ Options:
 DOCOPT
 
 begin
-  pp Docopt::docopt(doc)
+  pp Docopt::docopt(doc, version: Raven::VERSION)
 rescue Docopt::Exit => e
   puts e.message
 end
