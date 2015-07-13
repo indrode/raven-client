@@ -1,16 +1,12 @@
 module Raven
   class Keystore
     class << self
-      def keyfile(destination)
-        # retrieves public keyfile for a certain destination
-      end
-
       def private_keyfile
-        # retrieves local private keyfile
+        # returns private keyfile of this unkindness
       end
 
-      def password
-        # retrieves local password
+      def keyfile(destination)
+        # returns public keyfile for a destination
       end
     end
   end
