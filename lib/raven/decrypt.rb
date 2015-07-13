@@ -16,7 +16,7 @@ module Raven
     end
 
     def decrypt!
-      private_key = OpenSSL::PKey::RSA.new(File.read(private_keyfile), password)
+      private_key = OpenSSL::PKey::RSA.new(private_keyfile, password)
       cipher = OpenSSL::Cipher::Cipher.new('aes-256-cbc')
       cipher.decrypt
 
@@ -47,7 +47,7 @@ module Raven
     end
 
     def private_keyfile
-      Raven::Keystore.private_keyfile
+      File.read(Raven::Keystore.private_keyfile)
     end
   end
 end

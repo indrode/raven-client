@@ -1,5 +1,6 @@
-require "raven/version"
-require "raven/encrypt"
+require 'raven/version'
+require 'raven/encrypt'
+require 'raven/decrypt'
 
 module Raven
   def encrypt!(destination, data)

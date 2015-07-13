@@ -39,7 +39,7 @@ module Raven
       encrypted_data << cipher.final
 
       # 3. encrypt the random keys and IVs
-      public_key = OpenSSL::PKey::RSA.new(File.read(destination_keyfile))
+      public_key = OpenSSL::PKey::RSA.new(destination_keyfile)
       encrypted_key = Base64.encode64(public_key.public_encrypt(random_key))
       encrypted_iv = Base64.encode64(public_key.public_encrypt(random_iv))
 
@@ -54,7 +54,7 @@ module Raven
     private
 
     def destination_keyfile
-      Raven::Keystore.keyfile(destination)
+      File.read(Raven::Keystore.keyfile(destination))
     end
 
     def timestamp
