@@ -1,6 +1,6 @@
 # Raven
 
-[![Code Climate](https://codeclimate.com/github/indrode/raven-client/badges/gpa.svg)](https://codeclimate.com/github/indrode/raven-client)
+[![Code Climate](https://codeclimate.com/github/indrode/raven-client/badges/gpa.svg)](https://codeclimate.com/github/indrode/raven-client) [![Test Coverage](https://codeclimate.com/github/indrode/raven-client/badges/coverage.svg)](https://codeclimate.com/github/indrode/raven-client/coverage)
 
 ## Contributing
 
