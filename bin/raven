@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 # RAVEN
+require "bundler/setup"
 require 'raven_client'
 require 'docopt'
 require 'pp'
@@ -9,11 +10,11 @@ doc = <<DOCOPT
 Raven encrypts and decrypts messages for a specific destination.
 
 Usage:
-  #{__FILE__} build <origin>
-  #{__FILE__} train <destination>
-  #{__FILE__} train <destination> [--keyfile=<kf>]
-  #{__FILE__} -h | --help
-  #{__FILE__} --version
+  raven build <origin>
+  raven train <destination>
+  raven train <destination> [--keyfile=<kf>]
+  raven -h | --help
+  raven --version
 
 Options:
   -k=<kf> --keyfile=<kf>  Specify public key file.
