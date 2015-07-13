@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+# RAVEN
+require 'raven_client'
+require 'docopt'
+require 'pp'
+
+doc = <<DOCOPT
+Raven encrypts and decrypts messages for a specific destination.
+
+Usage:
+  #{__FILE__} build <origin>
+  #{__FILE__} train <destination>
+  #{__FILE__} train <destination> [--keyfile=<kf>]
+  #{__FILE__} -h | --help
+  #{__FILE__} --version
+
+Options:
+  -k=<kf> --keyfile=<kf>  Specify public key file.
+  -h --help               Show this.
+  -v --verbose            Verbose output.
+  --version               Show version.
+
+DOCOPT
+
+begin
+  pp Docopt::docopt(doc)
+rescue Docopt::Exit => e
+  puts e.message
+end
