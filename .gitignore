@@ -4,7 +4,6 @@
 /_yardoc/
 /coverage/
 /doc/
-/pkg/
 /spec/reports/
 /tmp/
 *.bundle
@@ -12,3 +11,4 @@
 *.o
 *.a
 mkmf.log
+TODOS
